@@ -2,6 +2,21 @@
 \usetheme{Boadilla}
 \usecolortheme{sidebartab}
 
+\usepackage{hyperref}
+\usepackage{showexpl} 
+
+\lstloadlanguages{[LaTeX]Tex} 
+\lstset{% 
+     basicstyle=\ttfamily\small, 
+     commentstyle=\itshape\ttfamily\small, 
+     showspaces=false, 
+     showstringspaces=false, 
+     breaklines=true, 
+     breakautoindent=true, 
+     captionpos=t,
+     pos=r
+} 
+
 \title{Introduction to writing with LaTeX}
 \author{Markus Stocker}
 \date{May 12, 2017}
@@ -10,7 +25,105 @@
 \maketitle
 
 \begin{frame}
-  \frametitle{Overview}
+  \frametitle{Outline}
+  
+  \begin{itemize}
+  \item Morning lecture
+  \begin{itemize}
+  \item What is \LaTeX
+  \item Some \LaTeX~history
+  \item Motivating \LaTeX 
+  \item \LaTeX~software environment
+  \item Elements of \LaTeX~documents
+  \item Scientific documents with journal \LaTeX~templates
+  \item \LaTeX~for slides and posters
+  \item Collaborative writing and versioning of \LaTeX~documents
+  \end{itemize}
+  \item Afternoon hands-on
+  \begin{itemize}
+  \item Develop your \LaTeX~manuscript
+  \item Style your manuscript with journal templates
+  \item Revise your manuscript with track changes
+  \item Create slides and a poster to present your work
+  \item Collaborative writing with your co-authors
+  \end{itemize}
+  \end{itemize}
 
 \end{frame}
+
+\begin{frame}
+  \frametitle{Schedule}
+  
+  \begin{center}
+  \begin{tabular}{ll}
+  10.00 - 11.30 & Lecture \\
+  11.30 - 12.30 & \emph{Lunch} \\
+  12.30 - 13.15 & Hands-on I \\
+  13.15 - 13.30 & \emph{Break} \\
+  13.30 - 14.15 & Hands-on II \\
+  14.15 - 14.45 & \emph{Coffee break} \\
+  14.45 - 15.30 & Hands-on III \\
+  15.30 - 15.45 & \emph{Break} \\
+  15.45 - 16.30 & Hands-on IV \\
+  16.30 - 17.00 & Closing
+  \end{tabular}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{About me}
+  
+  \begin{itemize}
+  \item Postdoc with PANGAEA at MARUM
+  \item PhD in environmental informatics at University of Eastern Finland
+  \item MSc in informatics at University of Zurich
+  \item MSc in environmental science at University of Eastern Finland \emph{(soon)}
+  \item My history with \LaTeX~goes back to 2001 when ...
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{What is \LaTeX}
+  
+  \begin{itemize}
+  \item Document preparation system
+  \item Most often used for technical or scientific documents
+  \item Worry less about style and more about content
+  \item Write plain text rather than formatted text
+  \item Using markup tagging for things like
+  \begin{itemize}
+  \item Defining document structure, e.g. chapters, sections
+  \item Styling text, e.g. italic, tables
+  \item Citing, footnoting, cross-referencing
+  \end{itemize}
+  \item Free software
+  \item Available for Windows, Mac OS, Linux, Online
+  \end{itemize}
+  
+  \begin{flushright}
+  \url{https://www.latex-project.org}
+  \end{flushright}
+
+\end{frame}
+
+\frame[containsverbatim]{ 
+  \begin{LTXexample}
+  \textit{Example} 
+  markup 
+  \underline{tagging}
+  \end{LTXexample}
+}
+
+\begin{frame}
+  \frametitle{A bit of history}
+  
+  \begin{itemize}
+  \item \LaTeX~was authored by L. Lamport, an American computer scientist
+  \item Originally released in 1985
+  \end{itemize}
+
+\end{frame}
+
 \end{document}

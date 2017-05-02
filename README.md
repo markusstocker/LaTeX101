@@ -13,8 +13,8 @@ These materials were prepared for the LaTeX course at [MARUM](http://www.marum.d
 15.45 - 16.30 Hands-on IV  
 16.30 - 17.00 Closing
 
-## Lectures
+## Lecture
 
-The lecture materials are available [here](lectures/introduction/stocker17latex101-lectures-introduction.pdf).
+The lecture slides are available [here](lectures/introduction/stocker17latex101-lectures-introduction.pdf) - obviously written in LaTeX.
 
 ## Hands on
