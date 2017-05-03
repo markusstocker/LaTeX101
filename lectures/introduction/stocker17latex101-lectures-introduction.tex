@@ -92,12 +92,7 @@
   \item Most often used for technical or scientific documents
   \item Worry less about style and more about content
   \item Write plain text rather than formatted text
-  \item Using markup tagging for things like
-  \begin{itemize}
-  \item Defining document structure, e.g. chapters, sections
-  \item Styling text, e.g. italic, tables
-  \item Citing, footnoting, cross-referencing
-  \end{itemize}
+  \item Leave document design to designers
   \item Free software
   \item Available for Windows, Mac OS, Linux, Online
   \end{itemize}
@@ -108,11 +103,44 @@
 
 \end{frame}
 
+
+\begin{frame}[fragile]
+  \frametitle{What is \LaTeX}
+	
+  \begin{itemize}
+  \item \textbf{Markup tagging} is central to writing with \LaTeX
+  \item Label parts of the document using tags, e.g. \lstinline!\textit{}!
+  \item It is used to do things like
+  \begin{itemize}
+  \item Define document structure, e.g. chapters, sections
+  \item Style text, e.g. italic, tables
+  \item Cite, footnote, cross-reference, ...
+  \end{itemize}
+  \item Anyone familiar with HTML?
+  \end{itemize}
+	
+\end{frame}
+
 \frame[containsverbatim]{ 
+  \frametitle{Markup tagging}
+		
   \begin{LTXexample}
   \textit{Example} 
   markup 
   \underline{tagging}
+  \end{LTXexample}
+}
+
+\frame[containsverbatim]{ 
+  \frametitle{Markup tagging}
+	
+  \begin{LTXexample}
+  \begin{itemize}
+  \item Eggs
+  \item Milk
+  \item Cheese
+  \item Carrots
+  \end{itemize}
   \end{LTXexample}
 }
 
