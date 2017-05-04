@@ -9,6 +9,7 @@
 \usepackage{siunitx}
 \usepackage[version=3]{mhchem}
 \usepackage{chemfig}
+\usepackage{changes}
 
 \lstloadlanguages{[LaTeX]Tex} 
 \lstset{% 
@@ -43,7 +44,7 @@
   \item Motivating \LaTeX 
   \item \LaTeX~software environment
   \item Basics of writing \LaTeX~documents
-  \item Tools for managing citations
+  \item BibTeX reference management
   \item Scientific documents with journal \LaTeX~templates
   \item \LaTeX~for slides and posters
   \item Collaborative writing and versioning of \LaTeX~documents
@@ -52,7 +53,7 @@
   \begin{itemize}
   \item Develop your \LaTeX~manuscript
   \item Style your manuscript with journal templates
-  \item Revise your manuscript with track changes
+  \item Revise your manuscript tracking changes
   \item Create slides and a poster to present your work
   \item Collaborative writing with your co-authors
   \end{itemize}
@@ -242,7 +243,7 @@ $ E = mc^2 $
     \item Cross-references, footnotes, and index
     \item Citation and reference list
     \item Table of contents, list of figures and tables
-    \item Track changes
+    \item Tracking changes
   \end{itemize}
 \end{frame}
 
@@ -372,7 +373,8 @@ Remember \textbf{when} you \textit{were} young \underline{you} shone \texttt{lik
   \begin{LTXexample}
 \begin{displaymath}
   \lim_{n \to \infty} 
-  \sum_{k=1}^n \frac{1}{k^2}
+  \sum_{k=1}^n 
+  \frac{1}{k^2}
 \end{displaymath}
 
 Math $a^2 + b^2 = c^2$ in text style.
@@ -422,13 +424,13 @@ I can do charges \ce{CrO4^2-} and much more.
   
   \begin{LTXexample}
 \begin{tabular}{|l|c|}
-\hline
-Year & Title \\
-\hline
-1973 & The Dark Side of the Moon \\
-1975 & Wish You Were Here \\
-1979 & The Wall \\
-\hline
+  \hline
+  Year & Title \\
+  \hline
+  1973 & The Dark Side of the Moon \\
+  1975 & Wish You Were Here \\
+  1979 & The Wall \\
+  \hline
 \end{tabular}
   \end{LTXexample}
 }
@@ -446,9 +448,9 @@ Year & Title \\
   
   \begin{LTXexample}
 \begin{figure}
-\centering
-\includegraphics[scale=0.4]{thewall.png}
-\caption{The Wall album cover}
+  \centering
+  \includegraphics[scale=0.4]{thewall.png}
+  \caption{The Wall album cover}
 \end{figure}
   \end{LTXexample}
 }
@@ -484,13 +486,13 @@ Now there's a look in your eyes,
   \end{verbatim}
 }
 
-\frame[containsverbatim]{
+\begin{frame}
   \frametitle{Footnotes}
   
   \begin{center}
   \includegraphics{figures/footnotes.pdf}
   \end{center}
-}
+\end{frame}
 
 \frame[containsverbatim]{
   \frametitle{Index}
@@ -504,37 +506,185 @@ Now there's a look in your eyes,
 
 \begin{document}
 
-Shine\index{Sun} on you crazy\newpage
-diamond\index{Diamond}\index{Diamond!Syd}.
+  Shine\index{Sun} on you crazy\newpage
+  diamond\index{Diamond}\index{Diamond!Syd}.
 
-\printindex
+  \printindex
+
+\end{document}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{Index}
+  
+  \begin{center}
+  \includegraphics[scale=1.5]{figures/index.pdf}
+  \end{center}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{Citation}
+
+  \begin{verbatim}
+\documentclass{article}
+
+\begin{document}
+
+  Shine on you crazy diamond \cite{pf}.
+
+  \bibliographystyle{plain}
+  \bibliography{bibliography.bib}
+
+\end{document}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{Reference list}
+  
+  \begin{center}
+  \includegraphics[scale=1]{figures/references.pdf}
+  \end{center}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{Table of contents, list of figures and tables}
+  
+  \begin{verbatim}
+\documentclass{article}
+
+\begin{document}
+
+  \tableofcontents  % Write out the Table of Contents
+  \listoffigures  % Write out the List of Figures
+  \listoftables  % Write out the List of Tables
 
 \end{document}
   \end{verbatim}
 }
 
 \frame[containsverbatim]{
-  \frametitle{Index}
-  
-  \begin{center}
-  \includegraphics[scale=1.5]{figures/index.pdf}
-  \end{center}
-}
-
-\frame[containsverbatim]{
-  \frametitle{Citation}
+  \frametitle{Table of contents}
   
   \begin{verbatim}
-
+\documentclass{article}
+  
+\title{Shine On You Crazy Diamond}
+\author{Pink Floyd}
+\date{1975}
+  
+\begin{document}
+  \maketitle
+  \tableofcontents 
+  \section{Introduction}
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  \section{History}
+  Morbi sagittis enim lorem, a pulvinar orci fringilla ac.
+\end{document}
   \end{verbatim}
 }
 
-\frame[containsverbatim]{
-  \frametitle{Reference list}
+\begin{frame}
+  \frametitle{Table of contents}
   
   \begin{center}
-  \includegraphics[scale=1.5]{figures/index.pdf}
+  \includegraphics[scale=0.7]{figures/toc.pdf}
   \end{center}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{Tracking changes}
+  
+  \begin{verbatim}
+\documentclass{article}
+
+\usepackage{changes}
+
+\definechangesauthor[name={John Doe}, color=blue]{JD}
+
+\begin{document}
+
+  \deleted{...} 
+  \replaced{...}{...} 
+  \added[id=JD]{...}
+
+\end{document}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{Tracking changes}
+  
+  \begin{center}
+  \includegraphics[scale=0.9]{figures/changes.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reference managers}
+  
+  \begin{itemize}
+  \item References should be managed, using some tool
+  \item Many out there, Mendeley, EndNote, RefWorks, ...
+  \item Make sure the one you choose supports BibTeX file format
+  \item Here we will be using JabRef
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{JabRef}
+  
+  \begin{center}
+  \includegraphics[scale=0.3]{figures/jabref.png}
+  \end{center}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{BibTeX citation}
+  
+  \begin{verbatim}
+@InProceedings{stocker08sparql,
+  title = {{SPARQL Basic Graph Pattern Optimization 
+            Using Selectivity Estimation}},
+  author = {Stocker, M. and Seaborne, A. 
+            and Bernstein, A. and Kiefer, C. 
+            and Reynolds, D.},
+  booktitle = {Proceeding of the 17th international 
+               conference on World Wide Web},
+  pages = {595--604},
+  year = {2008},
+  url = {http://doi.acm.org/10.1145/1367497.1367578},
+  doi = {10.1145/1367497.1367578}, 
+  publisher = {ACM},
+  isbn = {978-1-60558-085-2}
+}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{Obtain citations}
+  
+  \begin{center}
+  \includegraphics[scale=0.4]{figures/acm-citation.png}
+  \end{center}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{Cite}
+
+  \begin{verbatim}
+\documentclass{article}
+
+\begin{document}
+
+  In \cite{stocker08sparql}, the authors show that ...
+
+  \bibliographystyle{plain}
+  \bibliography{bibliography.bib}
+
+\end{document}
+  \end{verbatim}
 }
 
 \end{document}
