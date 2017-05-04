@@ -28,6 +28,9 @@
 \date{May 12, 2017}
 
 \begin{document}
+
+% Ask who knows about LaTeX and who has already experimented with it
+% Any expert users?
 \maketitle
 
 \begin{frame}
@@ -40,6 +43,7 @@
   \item Motivating \LaTeX 
   \item \LaTeX~software environment
   \item Basics of writing \LaTeX~documents
+  \item Tools for managing citations
   \item Scientific documents with journal \LaTeX~templates
   \item \LaTeX~for slides and posters
   \item Collaborative writing and versioning of \LaTeX~documents
@@ -234,7 +238,7 @@ $ E = mc^2 $
     \item Structural elements, e.g. title, sections
     \item Style text, e.g. font size, italic, bold
     \item Mathematical and chemical formulae, quantities and units
-    \item Tables and figures
+    \item Tables, graphics and figures
     \item Cross-references, footnotes, and index
     \item Citation and reference list
     \item Table of contents, list of figures and tables
@@ -411,6 +415,126 @@ I can do charges \ce{CrO4^2-} and much more.
 
 \SI{1.25}{\metre\per\second}
   \end{LTXexample}
+}
+
+\frame[containsverbatim]{ 
+  \frametitle{Tables}
+  
+  \begin{LTXexample}
+\begin{tabular}{|l|c|}
+\hline
+Year & Title \\
+\hline
+1973 & The Dark Side of the Moon \\
+1975 & Wish You Were Here \\
+1979 & The Wall \\
+\hline
+\end{tabular}
+  \end{LTXexample}
+}
+
+\frame[containsverbatim]{ 
+  \frametitle{Graphics}
+  
+  \begin{LTXexample}
+\includegraphics[scale=0.8]{thewall.png}
+  \end{LTXexample}
+}
+
+\frame[containsverbatim]{ 
+  \frametitle{Figures and captions}
+  
+  \begin{LTXexample}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{thewall.png}
+\caption{The Wall album cover}
+\end{figure}
+  \end{LTXexample}
+}
+
+\frame[containsverbatim]{ 
+  \frametitle{Cross-references}
+  
+  \begin{LTXexample}
+\begin{equation}\label{eq}
+E = mc^2
+\end{equation}
+
+As shown in Equation \ref{eq}, ...
+  \end{LTXexample}
+  
+  Note: Same approach is used for figures, tables, sections, ...
+}
+
+\frame[containsverbatim]{
+  \frametitle{Footnotes}
+  
+  \begin{verbatim}
+Remember when you were young, 
+  you shone like the sun.
+
+Shine 
+on\footnote{Read as if a comma is placed here} 
+you crazy 
+diamond\footnote{The crazy diamond is Syd Barrett}.
+
+Now there's a look in your eyes, 
+  like black holes in the sky.
+  \end{verbatim}
+}
+
+\frame[containsverbatim]{
+  \frametitle{Footnotes}
+  
+  \begin{center}
+  \includegraphics{figures/footnotes.pdf}
+  \end{center}
+}
+
+\frame[containsverbatim]{
+  \frametitle{Index}
+  
+  \begin{verbatim}
+\documentclass{article}
+
+\usepackage{makeidx}
+
+\makeindex
+
+\begin{document}
+
+Shine\index{Sun} on you crazy\newpage
+diamond\index{Diamond}\index{Diamond!Syd}.
+
+\printindex
+
+\end{document}
+  \end{verbatim}
+}
+
+\frame[containsverbatim]{
+  \frametitle{Index}
+  
+  \begin{center}
+  \includegraphics[scale=1.5]{figures/index.pdf}
+  \end{center}
+}
+
+\frame[containsverbatim]{
+  \frametitle{Citation}
+  
+  \begin{verbatim}
+
+  \end{verbatim}
+}
+
+\frame[containsverbatim]{
+  \frametitle{Reference list}
+  
+  \begin{center}
+  \includegraphics[scale=1.5]{figures/index.pdf}
+  \end{center}
 }
 
 \end{document}
