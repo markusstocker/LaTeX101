@@ -439,8 +439,11 @@ I can do charges \ce{CrO4^2-} and much more.
   \frametitle{Graphics}
   
   \begin{LTXexample}
-\includegraphics[scale=0.8]{thewall.png}
+\includegraphics[scale=0.6]{thewall.png}
   \end{LTXexample}
+  
+  Note: You can include PDFs! \\
+  Note: Graphics remain independent files
 }
 
 \frame[containsverbatim]{ 
@@ -686,6 +689,245 @@ Now there's a look in your eyes,
 \end{document}
   \end{verbatim}
 }
+
+
+\begin{frame}
+  \frametitle{Journal templates}
+  
+  \begin{itemize}
+    \item \LaTeX~is pretty much the standard in publishing
+    \item Most journal provide \LaTeX~templates
+    \item In fact, they are typically by the publisher
+    \item Selected publishers with \LaTeX~instructions
+    \begin{itemize}
+      \item Elsevier, Springer, IOS Press, PLOS, Taylor \& Francis, Wiley, SAGE, IEEE, MDPI, Nature Publishing Group, ...
+    \end{itemize}
+    \item Simply search for "[PUBLISHER/JOURNAL] latex template"
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Elsevier \LaTeX~instructions}
+  
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figures/elsevier.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Elsarticle \LaTeX~document class}
+  
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{figures/elsarticle.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\LaTeX~for slides}
+  
+  \begin{itemize}
+    \item \LaTeX~can be used to create slides
+    \item In fact, these slides were done with \LaTeX
+    \item Obviously, for a \LaTeX~course!
+    \item Widely used document class is called \texttt{beamer}
+  \end{itemize}
+\end{frame}
+
+
+\frame[containsverbatim]{
+  \frametitle{Slides with \texttt{beamer} document class}
+  
+  \begin{verbatim}
+\documentclass{beamer}
+
+\begin{document}
+
+  \begin{frame}
+    \frametitle{Outline}
+
+    \begin{itemize}
+      \item ...
+    \end{itemize}
+  \end{frame}
+
+\end{document}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{\LaTeX~for posters}
+  
+  \begin{itemize}
+    \item There are many document classes for posters
+    \item a0poster, baposter, sciposter, beamerposter, tikzposter, Jacobs, ...
+    \item As for slides, whether you use \LaTeX~for posters depends
+    \begin{itemize}
+      \item Is there a corresponding \LaTeX~article?
+      \item Are you reusing content from the article in the poster?
+      \item Especially formulae, references, etc.
+    \end{itemize}
+    \item Slides as PDF, not as PPTX (obviously)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Jacobs poster}
+  
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{figures/poster.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\LaTeX~for ...}
+  
+  \begin{itemize}
+    \item You can use \LaTeX~for a lot of things!
+    \item Plenty of document classes and packages
+    \item For instance, my CV is written in \LaTeX
+    \item \LaTeX~can create graphics, not just include them
+    \item You can write music with \LaTeX
+  \end{itemize}
+\end{frame}
+
+\frame[containsverbatim]{
+  \frametitle{Write music with \LaTeX}
+  
+  \begin{verbatim}
+\documentclass{article}
+
+\begin{document}
+
+  \begin{lilypond}
+    \relative c' {
+      c2 g'2 \times 2/3 { f8 e d } c'2 g4
+    }
+  \end{lilypond}
+
+\end{document}
+  \end{verbatim}
+}
+
+\begin{frame}
+  \frametitle{Write music with \LaTeX}
+  
+  \begin{center}
+    \includegraphics{figures/music.pdf}
+  \end{center}
+  
+  \vspace{1cm}
+  
+  \begin{center}
+    \url{https://martin-thoma.com/how-to-write-music-with-latex/}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Some thoughts on collaborative writing}
+  
+  \begin{itemize}
+    \item Typically, we work collaboratively on manuscripts
+    \item Collaborative writing is not entirely trivial
+    \item Too often we send around files by email
+    \item Google Docs has eased this considerably
+    \item It is super convenient, also for editing
+    \item However, not for complex documents
+    \item Write locally and safe in Dropbox is also popular
+    \item But Dropbox doesn't merge changes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Online \LaTeX}
+  
+  \begin{itemize}
+    \item There exist a number of online platforms
+    \item For instance Overleaf and ShareLaTeX
+    \item Overleaf is an online \LaTeX~collaborative writing tool
+    \item With a reasonable free plan
+    \item How to work offline, e.g. on an airplane?
+  \end{itemize}
+  
+  \vspace{1cm}
+  
+  \begin{flushright}
+    \url{https://www.overleaf.com/}
+  \end{flushright}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overleaf}
+  
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{figures/overleaf-1.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overleaf}
+  
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{figures/overleaf-2.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Git}
+  
+  \begin{itemize}
+    \item One of many version control systems
+    \item Supports tracking changes and coordinating work on files
+    \item Primarily used for software development
+    \item Great for collaborative writing with \LaTeX
+    \item Choose an online Git repository, e.g. GitHub, Bitbucket
+    \item Working against online repository 
+    \begin{itemize}
+      \item Enables collaborative writing
+      \item Ensures you have a backup
+      \item Facilitates work at the office, home, coffee shop, ...
+    \end{itemize}
+    \item Very powerful approach
+    \item As for \LaTeX, basics are relatively easy, details more intricate
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Git}
+  
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{figures/git.png}
+  \end{center}
+  
+  \begin{flushright}
+    \url{https://github.com/markusstocker/LaTeX101}
+  \end{flushright}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Basic Git commands}
+  
+  \begin{itemize}
+    \item \texttt{git clone}: Clone remote repository in local environment
+    \item \texttt{git status}: Check what has changed
+    \item \texttt{git add}: Add files to the local repository
+    \item \texttt{git commit}: Record changes to local repository
+    \item \texttt{git push}: Push changes to remote repository
+    \item \texttt{git pull}: Fetch changes from remote repositorys
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Take aways}
+  
+  \begin{itemize}
+    \item You need time to learn \LaTeX~and other presented tools
+    \item Practice, the basics are relatively straightforward
+    \item The optimal approach ultimately depends on your needs
+    \item Needs are typically different between projects
+    \item For most problems there is an answer online
+  \end{itemize}
+\end{frame}
 
 \end{document}
 
