@@ -9,3 +9,5 @@
 *.vrb
 *.soc
 *.spl
+*.bbl
+*.blg
