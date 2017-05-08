@@ -1,17 +1,17 @@
 # Introduction to writing with LaTeX
 
-These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills and Methods Course on writing with [LaTeX](http://www.latex-project.org/). The course was first held on May 12, 2017, and is structured in two parts: the first part consists of an introductory lecture and the second of a series of hands-on sessions. The agenda is as follows:
+These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills and Methods Course on writing with [LaTeX](http://www.latex-project.org/). The course was first held on May 12, 2017, and is structured in two parts: the first part consists of an introductory lecture and the second of a series of hands-on sessions. The schedule is as follows:
 
 10.00 - 11.30 [Lecture](#lecture)  
 11.30 - 12.30 Lunch  
-12.30 - 13.15 [Hands-on I](##hands-on-i)  
+12.30 - 13.15 [Hands-on I](#hands-on-i)  
 13.15 - 13.30 Break  
-13.30 - 14.15 Hands-on II  
+13.30 - 14.15 [Hands-on II](#hands-on-ii)  
 14.15 - 14.45 Coffee break  
-14.45 - 15.30 Hands-on III  
+14.45 - 15.30 [Hands-on III](#hands-on-iii)  
 15.30 - 15.45 Break  
-15.45 - 16.30 Hands-on IV  
-16.30 - 17.00 Closing
+15.45 - 16.30 [Hands-on IV](#hands-on-iv)  
+16.30 - 17.00 [Closing](#closing)
 
 ## Lecture
 
