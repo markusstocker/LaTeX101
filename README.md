@@ -15,13 +15,34 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 
 ## Lecture
 
-The introductory lecture slides are available [here](lectures/introduction/stocker17latex101-lectures-introduction.pdf). The lecture introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific manuscript, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific manuscripts with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
+The [lecture](materials/lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific manuscript, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific manuscripts with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
 
 ## Hands-on
 
-For the hands-on part of the course, we will write a scientific manuscript using LaTeX. The course provides a [default manuscript]() but we encourage students to bring along a manuscript they co-authored. The hands-on part is structured in four parts.
+For the hands-on part of the course, we will write a scientific manuscript using LaTeX. The course provides a [default manuscript](materials/manuscript/default-manuscript.pdf) but we encourage students to bring along a manuscript they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
+
+[Hands-on I](#hands-on-i)  
+[Hands-on II](#hands-on-ii)  
+[Hands-on III](#hands-on-iii)  
+[Hands-on IV](#hands-on-iv)  
 
 ### Hands-on I
+
+We will write our manuscript using the elsarticle document class. You can [download](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) the elsarticle package to your working directory from the CTAN Comprehensive TeX Archive Network, as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Specifically, you'll need the [elsarticle_template_harv_tex](http://mirrors.ctan.org/macros/latex/contrib/elsarticle/elsarticle-template-harv.tex) template.
+
+Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
+
+```
+latex elsarticle.ins
+```
+
+This will create the required [`elsarticle.cls`](materials/manuscript/elsarticle.cls) and [`elsarticle-harv.bst`](materials/manuscript/elsarticle-harv.bst) files. 
+
+Hint: If you have problems with this step, follow the links to the cls and bst files and you will get copies.
+
+Now copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. 
+
+
 
 ### Hands-on II
 
