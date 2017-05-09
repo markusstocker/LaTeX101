@@ -176,6 +176,84 @@ This demonstrates how easily it can be to completely change the layout of your m
 
 ### Hands-on III
 
+In this third hands-on, we will look at creating slides and a poster for our manuscript.
+
+There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our manuscript at a conference will thus begin with 
+
+```
+\documentclass{beamer}
+```
+
+There are several theme, color and font schemes available. Take a moment to [browser through the gallery](http://deic.uab.es/~iblanes/beamer_gallery/). You can load theme, color and font using the following commands in the preamble:
+
+```
+\usetheme{...}
+\usecolortheme{...}
+\usefonttheme{...}
+```
+
+Presentations generally have a title, author, and date. Similarly to articles, you can set these in the preamble with the following commands:
+
+```
+\title{}
+\author{}
+\date{}
+```
+
+You can add several author names. Try to underline the presenting author. 
+
+*Bonus: How can you add affiliation and email. Try to search for an answer on Google.*
+
+For the date you can either write one out or try the command `\today`. The basics are now configured and you are ready to start with drafting your slides. A set of slides is just a document. Unsurprisingly, we thus start with
+
+```
+\begin{document}
+```
+
+Remember to end the document. The first slide should be a title slide with author and date as configured in the preamble. You can instruct LaTeX to create a title slide with the following command
+
+```
+\maketitle
+```
+
+Each following slide rests in a `frame` environment. The basic pattern of commands is as follows:
+
+```
+\begin{frame}
+  \frametitle{Introduction}
+
+  \begin{itemize}
+  \item
+  \end{itemize}
+
+\end{frame}
+```
+
+Now, let's see how easy it is to take content from the manuscript and create slides, including citations, tables, images.
+
+For the Introduction slide, create a list with text citing some papers. You can take this from Section 1 in the manuscript. You will need to do two things. First, include the bibliography in an own frame with title *References*
+
+```
+% \tiny
+\bibliographystyle{plain} 
+\bibliography{bibliography}
+```
+
+You will see why you need to uncomment the `\tiny` command. Next, add the following command to the preamble
+
+```
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+```
+
+This will substitute an icon with a number. Now you are ready to cite work in your bibliography. Instead of using `\citet` and `\citep` as was the case in the manuscript, here we use the `\cite{<key>}` command.
+
+Create another frame and include some chemical formulae and quantities. Remember to include the corresponding packages.
+
+Next, create a slide that includes the table and one that includes a figure. You may not need a caption and label. Try including the table and figure without the corresponding environments. Note that you still want to center these elements on your slides. For the image, it may make sense to increase the scale factor, say to 0.8.
+
+*Hint: After building the document, try to zoom the slide with the image. Note that it does not pixelize as you zoom further. This is because we are including vector graphics.*
+
+
 ### Hands-on IV
 
 
