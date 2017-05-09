@@ -28,7 +28,7 @@ For the hands-on part of the course, we will write a scientific manuscript using
 
 ### Hands-on I
 
-In this first hands-on, we will look at the basic elements of a manuscript. We will write our manuscript using the elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
+In this first hands-on, we look at the basic elements of a manuscript. We will write our manuscript using the elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
 
 ```
 latex elsarticle.ins
@@ -81,7 +81,7 @@ Section 3 refers to a table, two figures, and mathematical formulae. We will loo
 
 ### Hands-on II
 
-In this second hands-on, we will look at the remaining more advanced elements of the manuscript, in particular mathematical formulae, tables, figures, citations and references.
+In this second hands-on, we look at the remaining more advanced elements of the manuscript, in particular mathematical formulae, tables, figures, citations and references.
 
 In the previous hands-on we have already made use of the inline math mode, `$ ...$`. This is practical for simple and short mathematical expresions. For more complex expressions, we use the `displaymath` environment
 
@@ -176,7 +176,7 @@ This demonstrates how easily it can be to completely change the layout of your m
 
 ### Hands-on III
 
-In this third hands-on, we will look at creating slides and a poster for our manuscript.
+In this third hands-on, we look at creating slides and a poster for our manuscript.
 
 There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our manuscript at a conference will thus begin with 
 
@@ -293,5 +293,29 @@ As you can see, the whole poster rests in a single `frame`. There are three main
 Try to place the content of our manuscript into these columns. You may need to move around blocks in order to fit the poster.
 
 ### Hands-on IV
+
+In this fourth hands-on, we look at collaborative writing with LaTeX. Specifically, we use [Overleaf](https://www.overleaf.com/) to edit our default manuscript and test the possibility to work on the manuscript collaboratively. Second, we demonstrate how [Git](https://git-scm.com/) can be used to work collaboratively on LaTeX documents.
+
+For both services you will need to register. Overleaf supports a number of social logins to make sign up easier. I use ORCID. Once signed up/in, you can create new projects or upload your zip archived LaTeX project. Try uploading your LaTeX manuscript.
+
+Similarly to Google Docs, Overleaf allows you to share your document by adding collaborators. You can test this feature by inviting fellow students. Try to collaborate on changing the manuscript. In particular, try to use the `changes` package to track changes you make. For this, you need to add the package to the preamble, add yourself and your collaborators as authors using the following command
+
+```
+\definechangesauthor[name={<your name>}, color=<blue,red,green,yellow>]{<your acronym>}
+```
+
+and then edit the text using the following commands, depending on your action
+
+```
+\deleted{...}
+\replaced{...}{...}
+\added[id=JD]{...}
+```
+
+Note what happens if you add the `final` option to `usepackage` in the preamble, as follows
+
+```
+\usepackage[final]{changes}
+```
 
 
