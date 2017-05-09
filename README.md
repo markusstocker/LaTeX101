@@ -253,6 +253,44 @@ Next, create a slide that includes the table and one that includes a figure. You
 
 *Hint: After building the document, try to zoom the slide with the image. Note that it does not pixelize as you zoom further. This is because we are including vector graphics.*
 
+Now let's try to create a poster.
+
+As for slides, there are [numerous templates](https://www.latextemplates.com/cat/conference-posters) that support you in writing a poster with LaTeX. Here, we will use the [Jacobs Landscape Poster](https://www.latextemplates.com/template/jacobs-landscape-poster).
+
+First, [download](http://www.latextemplates.com/templates/conference_posters/1/conference_poster_1.zip) the zip archive and unpack it in your working directory. Open `main.tex` in TeXshop and try to build the document. The template is well documented. Note that the template builds on `beamer`.
+
+Next, try to edit the poster by setting title, author, and institute. You can add multiple authors and affiliations as follows
+
+```
+\author{AuthorA\inst{1} \and AuthorB\inst{2}
+\institute{\inst{1} InstituteA \and \inst{2} InstituteB}
+```
+
+As you can see, the whole poster rests in a single `frame`. There are three main columns. The middle column is twice the size of the other two. The frame thus has the following main structure
+
+```
+\begin{frame}
+
+\begin{columns}
+
+\begin{column}{\onecolwid}
+...
+\end{column}
+
+\begin{column}{\twocolwid}
+...
+\end{column}
+
+\begin{column}{\onecolwid}
+...
+\end{column}
+
+\end{columns}
+
+\end{frame}
+```
+
+Try to place the content of our manuscript into these columns. You may need to move around blocks in order to fit the poster.
 
 ### Hands-on IV
 
