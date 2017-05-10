@@ -160,13 +160,19 @@ LaTeX computes the "optimal" place to position the figure in your article. Mostl
 
 *Note: LaTeX will honor the [!h] instruction but ultimately follows its rules. To achieve you goal, you may need to move other elements.*
 
-In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label`, of tables and figures. The same is true for sections: Try it out in Section 1 that refers to Section 2. Where do you put the section label?
+In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label`, of tables and figures. 
+
+*Hint: Table 1 in the text should be written as Table \ref{mytable}.*
+
+The same is true for sections: Try it out in Section 1 that refers to Section 2. Where do you put the section label?
 
 *Hint: The `\label` command follows right after the `\section` command.*
 
-References are a crucial element of scientific articles and it is important to know how to handle them in LaTeX. Fortunately, it isn't difficult. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. In fact, you can have one bibliography and include the file in all your LaTeX articles: LaTeX will include only those you cite in the particular article.
+References are another key element of scientific articles. Fortunately, LaTeX makes citations easy. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. 
 
-We provide a [bibliography file](article/bibliography.bib) to include in your working directory. You can include it in your LaTeX article with the following command
+In fact, you can maintain a single bibliography file and include it in all your LaTeX articles: LaTeX will include only those references you cite in the particular article.
+
+The course material includes a [bibliography file](article/bibliography.bib) which you can include in your working directory. You can include it in your LaTeX article with the following command
 
 ```
 \bibliography{bibliography}
@@ -174,7 +180,7 @@ We provide a [bibliography file](article/bibliography.bib) to include in your wo
 
 *Hint: The Elsevier template already includes the command. It is however commented. You need to uncomment the `\bibliographystyle` and `\bibliography` commands. Furthermore, you need to comment the `\begin{thebibliography}` environment (including its content).*
 
-In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby <key> corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXstudio and search the `lefort12qb` key.
+In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby `<key>` corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXstudio and search the `lefort12qb` key.
 
 The difference between the `\citet` and `\citep` commands is for textual and parenthetical citations, respectively. In Section 1 you can try them both. These commands accept a comma separated list of keys.
 
