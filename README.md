@@ -186,6 +186,8 @@ In Section 1, we cite a number of articles. Here, we use the following commands 
 
 The difference between the `\citet` and `\citep` commands is for textual and parenthetical citations, respectively. In Section 1 you can try them both. These commands accept a comma separated list of keys.
 
+Build the document and note the added list of references.
+
 The first paragraph in Section 1 uses a further command, namely `\citeauthor` for the second reference to Wang et al.:  Try it out and see the difference.
 
 The Elsevier template suppresses the section title for the reference list. You can include it by adding the following command just after `\bibliographystyle`
