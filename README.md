@@ -399,6 +399,9 @@ git clone https://github.com/[username]/myarticle.git
 
 If a co-author likes to contribute content to your article, they can fork the repository, make their changes, and then create a pull request. This is the mechanism for you to integrate changes and collaborate on your LaTeX article.
 
+## Closing
+
+Final questions and comments.
 
 
 
