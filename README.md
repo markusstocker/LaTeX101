@@ -148,11 +148,11 @@ Figures live in the `figure` environment, are generally centered, have a caption
 \end{figure}
 ```
 
-For Figure 1 you can use the file [load-performance-plot.pdf](article/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](article/query-performance-plot.pdf). Download these files to your working directory and add them instead of <filename>, respectively. 
+For Figure 1 you can use the file [load-performance-plot.pdf](article/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](article/query-performance-plot.pdf). Download these files to your working directory and add them instead of `<filename>`, respectively. 
 
 An `includegraphics` option you'll often use is `scale`. It accepts a number used as scaling factor. Typically the number will be above zero and below 1. Try, for instance, `scale=0.6`. Also, try to comment the command `\centering` to see the effect.
 
-In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby <label> refers to the name given in the corresponding `\label{...}`, of tables and figures. The same is true for sections: Try it out in Section 1 that refers to Section 2. Where to you put the section label?
+In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label{...}`, of tables and figures. The same is true for sections: Try it out in Section 1 that refers to Section 2. Where to you put the section label?
 
 *Hint: The `\label` command follows right after the `\section` command.
 
