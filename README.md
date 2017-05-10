@@ -188,7 +188,7 @@ The difference between the `\citet` and `\citep` commands is for textual and par
 
 Build the document and note the added list of references.
 
-The first paragraph in Section 1 uses a further command, namely `\citeauthor` for the second reference to Wang et al.:  Try it out and see the difference.
+The first paragraph in Section 1 requires a further command, namely `\citeauthor` for the second reference to Wang and Zhang: Try it out and see the difference.
 
 The Elsevier template suppresses the section title for the reference list. You can include it by adding the following command just after `\bibliographystyle`
 
@@ -198,9 +198,9 @@ The Elsevier template suppresses the section title for the reference list. You c
 
 *Note: Recall the meaning of the asterix.*
 
-Bibliographies should be managed using a tool. As we have seen in the lecture, publishers typically allows you to download BibTeX formatted citations. These can be easily included in your bibliography file using tools, just as JabRef. Try to open the `bibliography.bib` file in JabRef. Can you add a dummy citation and cite it in your article? Does it show up in the reference list?
+Bibliographies should be managed using a tool. As we have seen in the lecture, publishers typically support downloading BibTeX formatted citations. These can be easily included in your bibliography file using tools, such as JabRef. Try to open the `bibliography.bib` file in JabRef. Can you add a dummy citation and cite it in your article? Does it show up in the reference list?
 
-As a final task for this hands-on, look at the preamble of the Elsevier template. It documents a number of available options to style your article, e.g. double line spacing for review or two-column for the layout of published articles. Try to comment the `\documentclass` commands and test a few options to see the effect. See also the effect of the `\linenumbers` command.
+As a final task for this hands-on, look at the preamble of our `.tex` file (Elsevier template). It documents a number of available options to style your article, e.g. double line spacing for review or two-column for the layout of published articles. Try to comment the `\documentclass` commands and test a few options to see the effect. See also the effect of the `\linenumbers` command.
 
 This demonstrates how easily it can be to completely change the layout of your article, using few options in a single command. Changing document class from `elsarticle` to one of another publisher may involve a bit more work in the preamble but little or nothing in the body. This is the beauty of separating content from layout.
 
@@ -208,13 +208,13 @@ This demonstrates how easily it can be to completely change the layout of your a
 
 In this third hands-on, we look at creating slides and a poster for our article.
 
-There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our article at a conference will thus begin with 
+There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our article at a conference will thus begin with
 
 ```
 \documentclass{beamer}
 ```
 
-There are several theme, color and font schemes available. Take a moment to [browser through the gallery](http://deic.uab.es/~iblanes/beamer_gallery/). You can load theme, color and font using the following commands in the preamble:
+There are several theme, color and font schemes available. Take a moment to [browser through the gallery](http://deic.uab.es/~iblanes/beamer_gallery/). You can load theme, color and font using the following commands in the preamble
 
 ```
 \usetheme{...}
@@ -222,7 +222,7 @@ There are several theme, color and font schemes available. Take a moment to [bro
 \usefonttheme{...}
 ```
 
-Presentations generally have a title, author, and date. Similarly to articles, you can set these in the preamble with the following commands:
+Presentations generally have a title, author, and date. Similarly to articles, you can set these in the preamble with the following commands
 
 ```
 \title{}
@@ -246,7 +246,7 @@ Remember to end the document. The first slide should be a title slide with autho
 \maketitle
 ```
 
-Each following slide rests in a `frame` environment. The basic pattern of commands is as follows:
+Each following slide rests in a `frame` environment. The basic pattern of commands is as follows
 
 ```
 \begin{frame}
@@ -269,17 +269,17 @@ For the Introduction slide, create a list with text citing some papers. You can 
 \bibliography{bibliography}
 ```
 
-You will see why you need to uncomment the `\tiny` command. Next, add the following command to the preamble
+You will see why you need to uncomment the `\tiny` command. Make sure `bibliography.bib` can be found in the working directory (e.g. if you prepare your slides in a different directly). Next, add the following command to the preamble
 
 ```
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 ```
 
-This will substitute an icon with a number. Now you are ready to cite work in your bibliography. Instead of using `\citet` and `\citep` as was the case in the article, here we use the `\cite{<key>}` command.
+This will substitute icons with numbers for listed references. Now you are ready to cite work in your Introduction slide. Instead of using `\citet` and `\citep` as was the case in the article, here we use the `\cite{<key>}` command.
 
-Create another frame and include some chemical formulae and quantities. Remember to include the corresponding packages.
+Create a second frame titled Use Case and include some chemical formulae and quantities. Remember to include the corresponding packages.
 
-Next, create a slide that includes the table and one that includes a figure. You may not need a caption and label. Try including the table and figure without the corresponding environments. Note that you still want to center these elements on your slides. For the image, it may make sense to increase the scale factor, say to 0.8.
+Next, create a Results slide that includes the table and one that includes a figure. You may not need a caption and label. Try including the table and figure without the corresponding environments. Note that you still want to center these elements on your slides. For the image, it may make sense to increase the scale factor, say to 0.8. Make sure the PDF corresponding to the included graphic can be found in the working directory.
 
 *Hint: After building the document, try to zoom the slide with the image. Note that it does not pixelize as you zoom further. This is because we are including vector graphics.*
 
@@ -320,13 +320,13 @@ As you can see, the whole poster rests in a single `frame`. There are three main
 \end{frame}
 ```
 
-Try to place the content of your article into these columns. You may need to move around blocks in order to fit the poster.
+Try to place the content of your article into these columns. You may need to move around or remove unnecessary blocks in order to fit your content on the poster.
 
 ### Hands-on IV
 
 In this fourth hands-on, we look at collaborative writing with LaTeX. Specifically, we use [Overleaf](https://www.overleaf.com/) to edit our default article and test the possibility to work on the article collaboratively. Second, we demonstrate how [Git](https://git-scm.com/) can be used to work collaboratively on LaTeX documents.
 
-For both services you will need to register. Overleaf supports a number of social logins to make sign up easier. I use ORCID. Once signed up/in, you can create new projects or upload your zip archived LaTeX project. Try uploading your LaTeX article.
+For both services you will need to create accounts. Overleaf supports a number of social logins to make sign up easier. I use ORCID. Once signed up/in, you can create new projects or upload your zip archived LaTeX project. Try uploading your LaTeX article.
 
 Similarly to Google Docs, Overleaf allows you to share your document by adding collaborators. You can test this feature by inviting fellow students. Try to collaborate on changing the article. In particular, try to use the `changes` package to track changes you make. For this, you need to add the package to the preamble, add yourself and your collaborators as authors using the following command
 
@@ -350,15 +350,17 @@ Note what happens if you add the `final` option to `usepackage` in the preamble,
 
 Git is another approach to work collaboratively on documents, including LaTeX articles, slides, posters. To use Git collaboratively, you need to [install Git](https://git-scm.com/downloads) on your computer and choose an online Git repository service. [GitHub](https://github.com/) is arguably the most popular. Unfortunately, GitHub is free only for public projects, meaning that you need a paid plan if you want to manage your LaTeX articles in private repositories. There are alternatives, including some that include private repositories in their free plan. [Bitbucket](https://bitbucket.org) is an example.
 
-The course material is managed in a [GitHub repository](https://github.com/markusstocker/LaTeX101). In order to clone it into your working directory, you don't actually need an account. Try the following command:
+The course material is managed in a [GitHub repository](https://github.com/markusstocker/LaTeX101). In order to clone it into your working directory, you don't actually need an account. Try the following command
 
 ```
 git clone https://github.com/markusstocker/LaTeX101.git
 ```
 
+*Hint: On Windows you need to start a Git Bash.*
+
 This will clone the repository onto your computer. You obtain copies of all materials.
 
-You can use Git to managed document versions in your local environment. Create a directory called `myarticle` and change the directory. Then execute the following commands
+You can use Git to manage document versions in your local environment. Let's try this. Create a directory called `myarticle` and change the directory. Then execute the following commands
 
 ```
 git init
@@ -367,7 +369,7 @@ git add myarticle.tex
 git commit -m "added"
 ```
 
-This will create a Git repository and track your `.tex` file. Now, open `myarticle.tex` and type, e.g. the following
+This will create a Git repository and track the `myarticle.tex` file. Now, open `myarticle.tex` and type, e.g. the following
 
 ```
 \documentclass{article}
@@ -385,13 +387,13 @@ You can create a PDF using the command
 pdflatex myarticle
 ```
 
-You can check which files changed since your last commit using 
+You can check which files changed since your last commit using
 
 ```
 git status
 ```
 
-The file `myarticle.tex` was modified and a number of files are . If you want to track `myarticle.pdf`, use `git add myarticle.pdf` to track it. Then commit the changes with the following command
+The file `myarticle.tex` was modified and a number of files are untracked. If you want to track `myarticle.pdf`, use `git add myarticle.pdf` to track it. Then commit the changes with the following command
 
 ```
 git add myarticle.tex
@@ -410,7 +412,7 @@ Now, let's assume tomorrow you are unhappy about the small change and you want t
 git reset --hard <commit>
 ```
 
-You will see that the small change was indeed reset.
+where `<commit>` is (some of) the commit id (e.g. 7b8a7e754). You will see that the small change was indeed reset.
 
 While this is a good approach to track your changes and make sure you can reset to earlier versions, it does not enable collaboration with others, including with yourself (e.g. on different devices). Furthermore, there is no remote clone of your repository, meaning there is no "backup". For this you need to push your local repository to a service such as GitHub or Bitbucket.
 
@@ -429,9 +431,11 @@ git clone https://github.com/[username]/myarticle.git
 
 If a co-author likes to contribute content to your article, they can fork the repository, make their changes, and then create a pull request. This is the mechanism for you to integrate changes and collaborate on your LaTeX article.
 
+*Hint: Overleaf integrates with Git.*
+
 ## Closing
 
-Final questions and comments.
+Closing remarks, final questions and comments.
 
 
 
