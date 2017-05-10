@@ -40,7 +40,7 @@ This will create the required [`elsarticle.cls`](article/elsarticle.cls) and [`e
 
 You are now ready to start writing your own article. The following description uses our [default article](article/default-article.pdf).
 
-Open the `.tex` file in TeXshop as well as the default article (PDF). In TeXshop, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXshop. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
+Open the `.tex` file in TeXstudio as well as the default article (PDF). In TeXstudio, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXstudio. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
 
 As you can see in the footnote, we plan to submit the article to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
 
@@ -154,7 +154,7 @@ We provide a [bibliography file](article/bibliography.bib) to include in your wo
 
 *Hint: The Elsevier template already includes the command. It is however commented. You need to uncomment the `\bibliographystyle` and `\bibliography` commands. Furthermore, you need to comment the `\begin{thebibliography}` environment (including its content).*
 
-In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby <key> corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXshop and search the `lefort12qb` key.
+In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby <key> corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXstudio and search the `lefort12qb` key.
 
 The difference between the `\citet` and `\citep` commands is for textual and parenthetical citations, respectively. In Section 1 you can try them both. These commands accept a comma separated list of keys.
 
@@ -257,7 +257,7 @@ Now let's try to create a poster.
 
 As for slides, there are [numerous templates](https://www.latextemplates.com/cat/conference-posters) that support you in writing a poster with LaTeX. Here, we will use the [Jacobs Landscape Poster](https://www.latextemplates.com/template/jacobs-landscape-poster).
 
-First, [download](http://www.latextemplates.com/templates/conference_posters/1/conference_poster_1.zip) the zip archive and unpack it in your working directory. Open `main.tex` in TeXshop and try to build the document. The template is well documented. Note that the template builds on `beamer`.
+First, [download](http://www.latextemplates.com/templates/conference_posters/1/conference_poster_1.zip) the zip archive and unpack it in your working directory. Open `main.tex` in TeXstudio and try to build the document. The template is well documented. Note that the template builds on `beamer`.
 
 Next, try to edit the poster by setting title, author, and institute. You can add multiple authors and affiliations as follows
 
