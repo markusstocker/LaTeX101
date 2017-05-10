@@ -150,11 +150,19 @@ Figures live in the `figure` environment, are generally centered, have a caption
 
 For Figure 1 you can use the file [load-performance-plot.pdf](article/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](article/query-performance-plot.pdf). Download these files to your working directory and add them instead of `<filename>`, respectively. 
 
-An `includegraphics` option you'll often use is `scale`. It accepts a number used as scaling factor. Typically the number will be above zero and below 1. Try, for instance, `scale=0.6`. Also, try to comment the command `\centering` to see the effect.
+An `includegraphics` option you'll often use is `scale`. It accepts a number used as scaling factor. Typically the number will be above zero and below 1. Try, for instance, `scale=0.6`. Also, try to comment the command `\centering` to see the effect. Provide a caption and a label to each figure.
 
-In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label{...}`, of tables and figures. The same is true for sections: Try it out in Section 1 that refers to Section 2. Where to you put the section label?
+LaTeX computes the "optimal" place to position the figure in your article. Mostly it is indeed the best choice. However, sometimes you may want to take control and fine tune (for instance just before you'll print your dissertation). You can tell LaTeX to try placing figures (or tables) at a desired position using the following command. Try to place Figure 2 just before Section 3.
 
-*Hint: The `\label` command follows right after the `\section` command.
+```
+\begin{figure}[!h]
+```
+
+*Note: LaTeX will honor the [!h] instruction but ultimately follows its rules. To achieve you goal, you may need to move other elements.*
+
+In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label`, of tables and figures. The same is true for sections: Try it out in Section 1 that refers to Section 2. Where do you put the section label?
+
+*Hint: The `\label` command follows right after the `\section` command.*
 
 References are a crucial element of scientific articles and it is important to know how to handle them in LaTeX. Fortunately, it isn't difficult. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. In fact, you can have one bibliography and include the file in all your LaTeX articles: LaTeX will include only those you cite in the particular article.
 
