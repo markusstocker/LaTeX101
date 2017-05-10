@@ -6,7 +6,7 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 11.30 - 12.30 Lunch  
 12.30 - 13.15 [Hands-on I](#hands-on-i)  
 13.15 - 13.30 Break  
-13.30 - 14.15 [Hands-on II](#hands-on-ii)  
+13.30 - 14.15 [Hands-on II](#hands-on-ii)
 14.15 - 14.45 Coffee break  
 14.45 - 15.30 [Hands-on III](#hands-on-iii)  
 15.30 - 15.45 Break  
@@ -15,46 +15,46 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 
 ## Lecture
 
-The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific manuscript, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific manuscripts with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
+The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific article, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific articles with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
 
 ## Hands-on
 
-For the hands-on part of the course, we will write a scientific manuscript using LaTeX. The course provides a [default manuscript](manuscript/default-manuscript.pdf) but we encourage students to bring along a manuscript they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
+For the hands-on part of the course, we will write a scientific article using LaTeX. The course provides a [default article](article/default-article.pdf) but we encourage students to bring along an article they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
 
-[Hands-on I](#hands-on-i): Basic elements of a manuscript  
-[Hands-on II](#hands-on-ii): Advanced elements of a manucript  
+[Hands-on I](#hands-on-i): Basic elements of an article  
+[Hands-on II](#hands-on-ii): Advanced elements of an article  
 [Hands-on III](#hands-on-iii): Slides and poster  
 [Hands-on IV](#hands-on-iv): Collaborative writing  
 
 ### Hands-on I
 
-In this first hands-on, we look at the basic elements of a manuscript. We will write our manuscript using the elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
+In this first hands-on, we look at the basic elements of an article. We will write our article using the elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
 
 ```
 latex elsarticle.ins
 ```
 
-This will create the required [`elsarticle.cls`](manuscript/elsarticle.cls) and [`elsarticle-harv.bst`](manuscript/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your manuscript.
+This will create the required [`elsarticle.cls`](article/elsarticle.cls) and [`elsarticle-harv.bst`](article/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your article.
 
 *Hint: If you have problems with this step, follow the links to the `.cls` and `.bst` files and you will be able to download copies.*
 
-You are now ready to start writing your own manuscript. The following description uses our [default manuscript](manuscript/default-manuscript.pdf).
+You are now ready to start writing your own article. The following description uses our [default article](article/default-article.pdf).
 
-Open the `.tex` file in TeXshop as well as the default manuscript (PDF). In TeXshop, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXshop. The aim now is to re-create the default manuscript in LaTeX by writing the `.tex` file.
+Open the `.tex` file in TeXshop as well as the default article (PDF). In TeXshop, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXshop. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
 
-As you can see in the footnote, we plan to submit the manuscript to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
+As you can see in the footnote, we plan to submit the article to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
 
-The default manuscript has a title and three authors. Locate the LaTeX command to specify the title and add the title. At any time you can build the document to check if the change is reflected in the PDF output as intended. The Elsevier template provides documentation how to add author names and corresponding affiliations. Add the authors Kaiser, Doe, and Kaisaniemi with the corresponding affiliations. Look for documentation for the `\ead` command to add email addresses.
+The default article has a title and three authors. Locate the LaTeX command to specify the title and add the title. At any time you can build the document to check if the change is reflected in the PDF output as intended. The Elsevier template provides documentation how to add author names and corresponding affiliations. Add the authors Kaiser, Doe, and Kaisaniemi with the corresponding affiliations. Look for documentation for the `\ead` command to add email addresses.
 
 *Hint: Make use of the optional labels to link authors to addresses.*
 
-Scientific manuscripts typically include an abstract as well as keywords. It is generally easy to set these in LaTeX and many journal templates provide guidance. Extend your template with abstract and keywords.
+Scientific articles typically include an abstract as well as keywords. It is generally easy to set these in LaTeX and many journal templates provide guidance. Extend your template with abstract and keywords.
 
 *Hint: Make sure to use the command to separate keywords as suggested in the template.*
 
 Build your document and see how you are progressing nicely.
 
-Next, we create the structure of the manuscript, namely sections for Introduction, Case Study, Results, and Acknowledgements. Note that Acknowledgements is not numbered. You can achieve this with the command `\section*` (note the asterisk).
+Next, we create the structure of the article, namely sections for Introduction, Case Study, Results, and Acknowledgements. Note that Acknowledgements is not numbered. You can achieve this with the command `\section*` (note the asterisk).
 
 We can now start filling the sections. Let's start with introduction. It is just a few lines but includes variations for how to cite published literature, quoted text, and a reference to Section 2. We will look at the citations in the next hands-on session. Thus, for now just copy the text as it stands, e.g. "Wang et al. (2014)". However, let's get the quotes right as well as the reference to Section 2. Build your document to check if things look good.
 
@@ -81,7 +81,7 @@ Section 3 refers to a table, two figures, and mathematical formulae. We will loo
 
 ### Hands-on II
 
-In this second hands-on, we look at the remaining more advanced elements of the manuscript, in particular mathematical formulae, tables, figures, citations and references.
+In this second hands-on, we look at the remaining more advanced elements of the article, in particular mathematical formulae, tables, figures, citations and references.
 
 In the previous hands-on we have already made use of the inline math mode, `$ ...$`. This is practical for simple and short mathematical expresions. For more complex expressions, we use the `displaymath` environment
 
@@ -91,11 +91,11 @@ In the previous hands-on we have already made use of the inline math mode, `$ ..
 \end{displaymath}
 ```
 
-The manuscript includes a mathematical expression in such an environment. Writing such expressions in, LaTeX can be confusing at first, but the result is consistently great. Our expression includes the commands `\lim`, `\to` and `\frac`. Try it out!
+The article includes a mathematical expression in such an environment. Writing such expressions in, LaTeX can be confusing at first, but the result is consistently great. Our expression includes the commands `\lim`, `\to` and `\frac`. Try it out!
 
 *Hint: The template is as follows, \lim_{...} \frac{...}{...}*
 
-Tables are important elements of scientific manuscripts. In LaTeX, they can also be rather confusing at first. Tables live in the `table` environment, which encapsulates the table itself, a caption, typically a label and possibly other commands. For the table itself we use the `tabular` environment. Thus, the basic structure is as follows:
+Tables are important elements of scientific articles. In LaTeX, they can also be rather confusing at first. Tables live in the `table` environment, which encapsulates the table itself, a caption, typically a label and possibly other commands. For the table itself we use the `tabular` environment. Thus, the basic structure is as follows:
 
 ```
 \begin{table}
@@ -136,7 +136,7 @@ Figures live in the `figure` environment, are generally centered, have a caption
 \end{figure}
 ```
 
-For Figure 1 you can use the file [load-performance-plot.pdf](manuscript/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](manuscript/query-performance-plot.pdf). Download these files to your working directory and add them instead of <filename>, respectively. 
+For Figure 1 you can use the file [load-performance-plot.pdf](article/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](article/query-performance-plot.pdf). Download these files to your working directory and add them instead of <filename>, respectively. 
 
 An `includegraphics` option you'll often use is `scale`. It accepts a number used as scaling factor. Typically the number will be above zero and below 1. Try, for instance, `scale=0.6`. Also, try to comment the command `\centering` to see the effect.
 
@@ -144,9 +144,9 @@ In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are e
 
 *Hint: The `\label` command follows right after the `\section` command.
 
-References are a crucial element of scientific manuscripts and it is important to know how to handle them in LaTeX. Fortunately, it isn't difficult. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. In fact, you can have one bibliography and include the file in all your LaTeX manuscripts: LaTeX will include only those you cite in the particular manuscript.
+References are a crucial element of scientific articles and it is important to know how to handle them in LaTeX. Fortunately, it isn't difficult. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. In fact, you can have one bibliography and include the file in all your LaTeX articles: LaTeX will include only those you cite in the particular article.
 
-We provide a [bibliography file](manuscript/bibliography.bib) to include in your working directory. You can include it in your LaTeX manuscript with the following command
+We provide a [bibliography file](article/bibliography.bib) to include in your working directory. You can include it in your LaTeX article with the following command
 
 ```
 \bibliography{bibliography}
@@ -168,17 +168,17 @@ The Elsevier template suppresses the section title for the reference list. You c
 
 *Note: Recall the meaning of the asterix.*
 
-Bibliographies should be managed using a tool. As we have seen in the lecture, publishers typically allows you to download BibTeX formatted citations. These can be easily included in your bibliography file using tools, just as JabRef. Try to open the `bibliography.bib` file in JabRef. Can you add a dummy citation and cite it in your manuscript? Does it show up in the reference list?
+Bibliographies should be managed using a tool. As we have seen in the lecture, publishers typically allows you to download BibTeX formatted citations. These can be easily included in your bibliography file using tools, just as JabRef. Try to open the `bibliography.bib` file in JabRef. Can you add a dummy citation and cite it in your article? Does it show up in the reference list?
 
 As a final task for this hands-on, look at the preamble of the Elsevier template. It documents a number of available options to style your article, e.g. double line spacing for review or two-column for the layout of published articles. Try to comment the `\documentclass` commands and test a few options to see the effect. See also the effect of the `\linenumbers` command.
 
-This demonstrates how easily it can be to completely change the layout of your manuscript, using few options in a single command. Changing document class from `elsarticle` to one of another publisher may involve a bit more work in the preamble but little or nothing in the body. This is the beauty of separating content from layout.
+This demonstrates how easily it can be to completely change the layout of your article, using few options in a single command. Changing document class from `elsarticle` to one of another publisher may involve a bit more work in the preamble but little or nothing in the body. This is the beauty of separating content from layout.
 
 ### Hands-on III
 
-In this third hands-on, we look at creating slides and a poster for our manuscript.
+In this third hands-on, we look at creating slides and a poster for our article.
 
-There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our manuscript at a conference will thus begin with 
+There exist several document classes for creating slides. Here we will use `beamer`. The `.tex` file for the slides used to present our article at a conference will thus begin with 
 
 ```
 \documentclass{beamer}
@@ -229,9 +229,9 @@ Each following slide rests in a `frame` environment. The basic pattern of comman
 \end{frame}
 ```
 
-Now, let's see how easy it is to take content from the manuscript and create slides, including citations, tables, images.
+Now, let's see how easy it is to take content from the article and create slides, including citations, tables, images.
 
-For the Introduction slide, create a list with text citing some papers. You can take this from Section 1 in the manuscript. You will need to do two things. First, include the bibliography in an own frame with title *References*
+For the Introduction slide, create a list with text citing some papers. You can take this from Section 1 in the article. You will need to do two things. First, include the bibliography in an own frame with title *References*
 
 ```
 % \tiny
@@ -245,7 +245,7 @@ You will see why you need to uncomment the `\tiny` command. Next, add the follow
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 ```
 
-This will substitute an icon with a number. Now you are ready to cite work in your bibliography. Instead of using `\citet` and `\citep` as was the case in the manuscript, here we use the `\cite{<key>}` command.
+This will substitute an icon with a number. Now you are ready to cite work in your bibliography. Instead of using `\citet` and `\citep` as was the case in the article, here we use the `\cite{<key>}` command.
 
 Create another frame and include some chemical formulae and quantities. Remember to include the corresponding packages.
 
@@ -290,15 +290,15 @@ As you can see, the whole poster rests in a single `frame`. There are three main
 \end{frame}
 ```
 
-Try to place the content of our manuscript into these columns. You may need to move around blocks in order to fit the poster.
+Try to place the content of your article into these columns. You may need to move around blocks in order to fit the poster.
 
 ### Hands-on IV
 
-In this fourth hands-on, we look at collaborative writing with LaTeX. Specifically, we use [Overleaf](https://www.overleaf.com/) to edit our default manuscript and test the possibility to work on the manuscript collaboratively. Second, we demonstrate how [Git](https://git-scm.com/) can be used to work collaboratively on LaTeX documents.
+In this fourth hands-on, we look at collaborative writing with LaTeX. Specifically, we use [Overleaf](https://www.overleaf.com/) to edit our default article and test the possibility to work on the article collaboratively. Second, we demonstrate how [Git](https://git-scm.com/) can be used to work collaboratively on LaTeX documents.
 
-For both services you will need to register. Overleaf supports a number of social logins to make sign up easier. I use ORCID. Once signed up/in, you can create new projects or upload your zip archived LaTeX project. Try uploading your LaTeX manuscript.
+For both services you will need to register. Overleaf supports a number of social logins to make sign up easier. I use ORCID. Once signed up/in, you can create new projects or upload your zip archived LaTeX project. Try uploading your LaTeX article.
 
-Similarly to Google Docs, Overleaf allows you to share your document by adding collaborators. You can test this feature by inviting fellow students. Try to collaborate on changing the manuscript. In particular, try to use the `changes` package to track changes you make. For this, you need to add the package to the preamble, add yourself and your collaborators as authors using the following command
+Similarly to Google Docs, Overleaf allows you to share your document by adding collaborators. You can test this feature by inviting fellow students. Try to collaborate on changing the article. In particular, try to use the `changes` package to track changes you make. For this, you need to add the package to the preamble, add yourself and your collaborators as authors using the following command
 
 ```
 \definechangesauthor[name={<your name>}, color=<blue,red,green,yellow>]{<your acronym>}
@@ -318,4 +318,4 @@ Note what happens if you add the `final` option to `usepackage` in the preamble,
 \usepackage[final]{changes}
 ```
 
-
+Git is another approach to work collaboratively on documents, including LaTeX articles, slides, posters.
