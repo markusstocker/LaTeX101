@@ -318,4 +318,88 @@ Note what happens if you add the `final` option to `usepackage` in the preamble,
 \usepackage[final]{changes}
 ```
 
-Git is another approach to work collaboratively on documents, including LaTeX articles, slides, posters.
+Git is another approach to work collaboratively on documents, including LaTeX articles, slides, posters. To use Git collaboratively, you need to [install Git](https://git-scm.com/downloads) on your computer and choose an online Git repository service. [GitHub](https://github.com/) is arguably the most popular. Unfortunately, GitHub is free only for public projects, meaning that you need a paid plan if you want to manage your LaTeX articles in private repositories. There are alternatives, including some that include private repositories in their free plan. [Bitbucket](https://bitbucket.org) is an example.
+
+The course material is managed in a [GitHub repository](https://github.com/markusstocker/LaTeX101). In order to clone it into your working directory, you don't actually need an account. Try the following command:
+
+```
+git clone https://github.com/markusstocker/LaTeX101.git
+```
+
+This will clone the repository onto your computer. You obtain copies of all materials.
+
+You can use Git to managed document versions in your local environment. Create a directory called `myarticle` and change the directory. Then execute the following commands
+
+```
+git init
+touch myarticle.tex # Create a file
+git add myarticle.tex
+git commit -m "added"
+```
+
+This will create a Git repository and track your `.tex` file. Now, open `myarticle.tex` and type, e.g. the following
+
+```
+\documentclass{article}
+
+\begin{document}
+
+Hello world
+
+\end{document}
+```
+
+You can create a PDF using the command
+
+```
+pdflatex myarticle
+```
+
+You can check which files changed since your last commit using 
+
+```
+git status
+```
+
+The file `myarticle.tex` was modified and a number of files are . If you want to track `myarticle.pdf`, use `git add myarticle.pdf` to track it. Then commit the changes with the following command
+
+```
+git add myarticle.tex
+git commit -m "writing myarticle"
+```
+
+Next, make a change to `myarticle.tex` and then commit the change
+
+```
+git commit -a -m "a small change"
+```
+
+Now, let's assume tomorrow you are unhappy about the small change and you want to reset to the earlier version. With `git log` you can see the history. The following command will reset to the desired version
+
+```
+git reset --hard <commit>
+```
+
+You will see that the small change was indeed reset.
+
+While this is a good approach to track your changes and make sure you can reset to earlier versions, it does not enable collaboration with others, including with yourself (e.g. on different devices). Furthermore, there is no remote clone of your repository, meaning there is no "backup". For this you need to push your local repository to a service such as GitHub or Bitbucket.
+
+With your GitHub account, create a new repository called `myarticle`. GitHub will instruct you how you can push your existing repository to GitHub, e.g. using `HTTPS`
+
+```
+git remote add origin https://github.com/[username]/myarticle.git
+git push -u origin master
+```
+
+That's it. Your repository is now on GitHub. Load the `https://github.com/[username]/myarticle` URL in your browser. If you happen to remove the `myarticle` directory on your local computer, or you like to work on your article from some other computer, you can simply clone the repository
+
+```
+git clone https://github.com/[username]/myarticle.git
+```
+
+If a co-author likes to contribute content to your article, they can fork the repository, make their changes, and then create a pull request. This is the mechanism for you to integrate changes and collaborate on your LaTeX article.
+
+
+
+
+
