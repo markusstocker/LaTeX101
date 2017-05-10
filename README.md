@@ -15,7 +15,7 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 
 ## Lecture
 
-The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software, primarily Microsoft Word. The lecture surveys key elements of a typical scientific article, such as figures and references, and explains how to write them in LaTeX. We discuss BibTeX and reference management, styling scientific articles with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
+The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software, primarily Microsoft Word. The lecture surveys key elements of a typical scientific article, such as figures and references, and explains how to write them in LaTeX. We discuss BibTeX and reference management, styling scientific articles with journal LaTeX templates, LaTeX support for writing slides and posters, as well as approaches for collaborative writing of LaTeX documents.
 
 ## Hands-on
 
