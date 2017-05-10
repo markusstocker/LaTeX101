@@ -19,7 +19,13 @@ The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTe
 
 ## Hands-on
 
-The hands-on part of the course consists of pratical exercises in writing scientific documents using LaTeX. The course material includes a [default article](article/default-article.pdf) but we encourage students to bring along an article they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
+The hands-on part of the course consists of pratical exercises in writing scientific documents using LaTeX. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/).
+
+The course material includes a [default article](article/default-article.pdf) but we encourage students to bring along an article they co-authored.
+
+*Hint: Do not "Save link as ..."; Open links in a new tab and download the document.*
+
+The hands-on part is structured in four sub parts:
 
 [Hands-on I](#hands-on-i): Basic elements of an article  
 [Hands-on II](#hands-on-ii): Advanced elements of an article  
@@ -36,13 +42,15 @@ latex elsarticle.ins
 
 This will create the required [`elsarticle.cls`](article/elsarticle.cls) and [`elsarticle-harv.bst`](article/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your article.
 
-*Hint: If you have problems with this step, follow the links to the `.cls` and `.bst` files and you will be able to download copies.*
+*Hint: If you have problems with this step, follow the links above to the `.cls` and `.bst` files and you will be able to download copies. Remember to open links in a new tab and download the (raw) document. Unfortunately, in some browsers on Windows, saving the file will add a .txt appendix. You will need to rename the file: `move elsarticle.cls.txt elsarticle.cls`.*
 
 You are now ready to start writing your own article. The following description uses our [default article](article/default-article.pdf).
 
 Open the `.tex` file in TeXstudio as well as the default article (PDF). In TeXstudio, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXstudio. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
 
 As you can see in the footnote, we plan to submit the article to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
+
+*Note: You can copy text from the PDF but check it for correctness!*
 
 The default article has a title and three authors. Locate the LaTeX command to specify the title and add the title. At any time you can build the document to check if the change is reflected in the PDF output as intended. The Elsevier template provides documentation how to add author names and corresponding affiliations. Add the authors Kaiser, Doe, and Kaisaniemi with the corresponding affiliations. Look for documentation regarding the `\ead` command to add email addresses.
 
@@ -56,9 +64,9 @@ Build your document and see how you are progressing nicely.
 
 Next, we create the structure of the article, namely sections for Introduction, Case Study, Results, Conclusion and Acknowledgements. Note that Acknowledgements is not numbered. You can achieve this with the command `\section*` (note the asterisk).
 
-We can now start filling the sections. Let's start with introduction. It is just a few lines but includes variations for how to cite published literature, quoted text, and a reference to Section 2. We will look at the citations in the next hands-on session. Thus, for now just copy the text as it stands, e.g. "Wang et al. (2014)". However, let's get the quotes right as well as the reference to Section 2. Build your document to check if things look good.
+We can now start filling the sections. Let's start with Introduction. It is just a few lines but includes paragraphs, variations for how to cite published literature, quoted text, and a reference to Section 2. We will look at the citations in the next hands-on session. Thus, for now just copy the text as it stands, including citations such as "Wang et al. (2014)". At this point, let's focus on paragraphs, quotes, and the reference to Section 2. Build your document to check if things look good.
 
-Section 2 introduces some chemical molecules, footnotes, quantities and units, and mathematical notation. You'll need to include the packages `mhchem` and `siunitx` in the preamble of your LaTeX document by adding the following `\usepackage` commands:
+Section 2 introduces some chemical molecules, footnotes, quantities with value and unit, and mathematical notation. You'll need to include the packages `mhchem` and `siunitx` in the preamble of your LaTeX document by adding the following `\usepackage` commands:
 
 ```
 \usepackage[version=3]{mhchem}
@@ -73,11 +81,13 @@ For quantities with value and unit, we have seen the command `\SI{<value>}{<unit
 
 The `siunitx` package also supports writing numbers using the `\num{...}` command. Note how the command formats the number `1604500` with spaces.
 
-Next, the text speaks of a matrix of 18000 rows and 40 columns. We use the inline math mode to `$ ... $` to write this in LaTeX, using the `\times` command. Can you spot the difference if you use the `\num{...}` command for format, e.g., the number of rows?
+Next, the text speaks of a matrix of 18000 rows and 40 columns. We use the inline math mode to `$ ... $` to write this in LaTeX, using the `\times` command. Can you spot the difference if you use the `\num{...}` command to format, e.g., the number of rows?
 
-Finally, we have two units. We can use the `siunitx` package and `\si{<unit>}` command. Micro mole per mole is `\si{\micro\mol\per\mol}`. What could be the command for milli?
+Finally, we have two units. Micro mole per mole is `\si{\micro\mol\per\mol}`. What could be the command for milli?
 
-Section 3 refers to a table, two figures, and mathematical formulae. We will look into those in the next hands-on. To conclude this hands-on, we highlight two commands used to format text, namely `\emph{...}` and `\texttt{...}`. Use them to emphasize the words `load` and `query` and to print in true type the words `FILTER` and `ORDER BY`, respectively.
+*Note: Don't forget the molecules.*
+
+Section 3 refers to a table, two figures, and mathematical formulae. We will look into those in the next hands-on. To conclude this hands-on, we highlight two commands used to format text, namely `\emph{...}` and `\texttt{...}`. Use them to emphasize the words `load` and `query` and to print in true type the words `FILTER` and `ORDER BY`, respectively. Section 4, Conclusion, and Acknowledgements only consists of plain text: you can simply copy it.
 
 ### Hands-on II
 
