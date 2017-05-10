@@ -6,7 +6,7 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 11.30 - 12.30 Lunch  
 12.30 - 13.15 [Hands-on I](#hands-on-i)  
 13.15 - 13.30 Break  
-13.30 - 14.15 [Hands-on II](#hands-on-ii)
+13.30 - 14.15 [Hands-on II](#hands-on-ii)  
 14.15 - 14.45 Coffee break  
 14.45 - 15.30 [Hands-on III](#hands-on-iii)  
 15.30 - 15.45 Break  
