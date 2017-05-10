@@ -42,7 +42,7 @@ latex elsarticle.ins
 
 This will create the required [`elsarticle.cls`](article/elsarticle.cls) and [`elsarticle-harv.bst`](article/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your article.
 
-*Hint: If you have problems with this step, follow the links above to the `.cls` and `.bst` files and you will be able to download copies. Remember to open links in a new tab and download the (raw) document. Unfortunately, in some browsers on Windows, saving the file will add a .txt appendix. You will need to rename the file: `move elsarticle.cls.txt elsarticle.cls`.*
+*Hint: If you have problems with this step, follow the links above to the `.cls` and `.bst` files and you will be able to download copies. Remember to open links in a new tab and download the (raw) document. Unfortunately, on Windows saving the file will add a .txt appendix. You will need to rename the file: `move elsarticle.cls.txt elsarticle.cls`.*
 
 You are now ready to start writing your own article. The following description uses our [default article](article/default-article.pdf).
 
