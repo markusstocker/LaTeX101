@@ -93,7 +93,7 @@ Section 3 refers to a table, two figures, and mathematical formulae. We will loo
 
 In this second hands-on, we look at the remaining more advanced elements of the article, in particular mathematical formulae, tables, figures, citations and references.
 
-In the previous hands-on we have already made use of the inline math mode, `$ ...$`. This is practical for simple and short mathematical expresions. For more complex expressions, we use the `displaymath` environment
+In the previous hands-on we have already made use of the inline math mode, `$ ...$`. This is practical for simple and short mathematical expressions. For more complex expressions, we use the `displaymath` environment
 
 ```
 \begin{displaymath}
@@ -101,7 +101,7 @@ In the previous hands-on we have already made use of the inline math mode, `$ ..
 \end{displaymath}
 ```
 
-The article includes a mathematical expression in such an environment. Writing such expressions in, LaTeX can be confusing at first, but the result is consistently great. Our expression includes the commands `\lim`, `\to` and `\frac`. Try it out!
+The article includes a mathematical expression in such an environment. Writing such expressions can be confusing at first but the result is consistently great. Our expression includes the commands `\lim`, `\to` and `\frac`. Try it out!
 
 *Hint: The template is as follows, \lim_{...} \frac{...}{...}*
 
@@ -117,9 +117,11 @@ Tables are important elements of scientific articles. In LaTeX, they can also be
 \end{table}
 ```
 
-Tables are typically centered, and this can be easily achieved with the `\centering` command within the `table` environment. As table captions are typically written above the table, the `\caption` command comes before the `tabular` environment.
+Tables are typically centered, and this can be easily achieved with the `\centering` command within the `table` environment. As the table caption is typically written above the table, the `\caption` command comes before the `tabular` environment. Provide some label, e.g. `mytable`, to the `\label` command.
 
-Our table has four columns. Columns are defined in <column definition> by determining if column text is left/right aligned or centered and whether the columns are separated by a line (this is admittedly not the full story but it serves the purpose here). In our table, text alignment in the four columns is centered, right, right, right. Furthermore, we have lines separating each column. This is codified with the following sequence for <column definition>
+*Hint: Do not number labels of sections, tables, figures as the order will likely change. Thus, `table1` is not a good label.*
+
+Our table has four columns. Columns are defined in `<column definition>` by determining if column text is left/right aligned or centered and whether the columns are separated by a line (this is admittedly not the full story but it serves the purpose here). In our table, text alignment in the four columns is centered, right, right, right. Furthermore, we have lines separating each column. This is codified with the following sequence for `<column definition>`
 
 ```
 |c|r|r|r|
