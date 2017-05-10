@@ -15,11 +15,11 @@ These materials were prepared for the [MARUM](http://www.marum.de) Basic Skills 
 
 ## Lecture
 
-The [lecture](materials/lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific manuscript, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific manuscripts with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
+The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTeX by explaining what LaTeX is and what its pros and cons are compared to commonly used word processing software. The lecture surveys key elements of a typical scientific manuscript, such as figures and references, and explains how to write them in LaTeX. We will present BibTeX and reference management, styling scientific manuscripts with journal LaTeX templates, LaTeX support for writing slides and posters, as well as present approaches for collaborative writing of LaTeX documents.
 
 ## Hands-on
 
-For the hands-on part of the course, we will write a scientific manuscript using LaTeX. The course provides a [default manuscript](materials/manuscript/default-manuscript.pdf) but we encourage students to bring along a manuscript they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
+For the hands-on part of the course, we will write a scientific manuscript using LaTeX. The course provides a [default manuscript](manuscript/default-manuscript.pdf) but we encourage students to bring along a manuscript they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
 
 [Hands-on I](#hands-on-i): Basic elements of a manuscript  
 [Hands-on II](#hands-on-ii): Advanced elements of a manucript  
@@ -34,11 +34,11 @@ In this first hands-on, we look at the basic elements of a manuscript. We will w
 latex elsarticle.ins
 ```
 
-This will create the required [`elsarticle.cls`](materials/manuscript/elsarticle.cls) and [`elsarticle-harv.bst`](materials/manuscript/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your manuscript.
+This will create the required [`elsarticle.cls`](manuscript/elsarticle.cls) and [`elsarticle-harv.bst`](manuscript/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your manuscript.
 
 *Hint: If you have problems with this step, follow the links to the `.cls` and `.bst` files and you will be able to download copies.*
 
-You are now ready to start writing your own manuscript. The following description uses our [default manuscript](materials/manuscript/default-manuscript.pdf).
+You are now ready to start writing your own manuscript. The following description uses our [default manuscript](manuscript/default-manuscript.pdf).
 
 Open the `.tex` file in TeXshop as well as the default manuscript (PDF). In TeXshop, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXshop. The aim now is to re-create the default manuscript in LaTeX by writing the `.tex` file.
 
@@ -136,7 +136,7 @@ Figures live in the `figure` environment, are generally centered, have a caption
 \end{figure}
 ```
 
-For Figure 1 you can use the file [load-performance-plot.pdf](materials/manuscript/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](materials/manuscript/query-performance-plot.pdf). Download these files to your working directory and add them instead of <filename>, respectively. 
+For Figure 1 you can use the file [load-performance-plot.pdf](manuscript/load-performance-plot.pdf) and for Figure 2 the file [query-performance-plot.pdf](manuscript/query-performance-plot.pdf). Download these files to your working directory and add them instead of <filename>, respectively. 
 
 An `includegraphics` option you'll often use is `scale`. It accepts a number used as scaling factor. Typically the number will be above zero and below 1. Try, for instance, `scale=0.6`. Also, try to comment the command `\centering` to see the effect.
 
@@ -146,7 +146,7 @@ In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are e
 
 References are a crucial element of scientific manuscripts and it is important to know how to handle them in LaTeX. Fortunately, it isn't difficult. Bibliographies are best loaded from external `.bib` files using the `\bibliography{<filename>}` command. The Elsevier template provides instructions. In fact, you can have one bibliography and include the file in all your LaTeX manuscripts: LaTeX will include only those you cite in the particular manuscript.
 
-We provide a [bibliography file](materials/manuscript/bibliography.bib) to include in your working directory. You can include it in your LaTeX manuscript with the following command
+We provide a [bibliography file](manuscript/bibliography.bib) to include in your working directory. You can include it in your LaTeX manuscript with the following command
 
 ```
 \bibliography{bibliography}
