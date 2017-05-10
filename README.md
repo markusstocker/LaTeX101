@@ -44,7 +44,7 @@ Open the `.tex` file in TeXstudio as well as the default article (PDF). In TeXst
 
 As you can see in the footnote, we plan to submit the article to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
 
-The default article has a title and three authors. Locate the LaTeX command to specify the title and add the title. At any time you can build the document to check if the change is reflected in the PDF output as intended. The Elsevier template provides documentation how to add author names and corresponding affiliations. Add the authors Kaiser, Doe, and Kaisaniemi with the corresponding affiliations. Look for documentation for the `\ead` command to add email addresses.
+The default article has a title and three authors. Locate the LaTeX command to specify the title and add the title. At any time you can build the document to check if the change is reflected in the PDF output as intended. The Elsevier template provides documentation how to add author names and corresponding affiliations. Add the authors Kaiser, Doe, and Kaisaniemi with the corresponding affiliations. Look for documentation regarding the `\ead` command to add email addresses.
 
 *Hint: Make use of the optional labels to link authors to addresses.*
 
@@ -54,7 +54,7 @@ Scientific articles typically include an abstract as well as keywords. It is gen
 
 Build your document and see how you are progressing nicely.
 
-Next, we create the structure of the article, namely sections for Introduction, Case Study, Results, and Acknowledgements. Note that Acknowledgements is not numbered. You can achieve this with the command `\section*` (note the asterisk).
+Next, we create the structure of the article, namely sections for Introduction, Case Study, Results, Conclusion and Acknowledgements. Note that Acknowledgements is not numbered. You can achieve this with the command `\section*` (note the asterisk).
 
 We can now start filling the sections. Let's start with introduction. It is just a few lines but includes variations for how to cite published literature, quoted text, and a reference to Section 2. We will look at the citations in the next hands-on session. Thus, for now just copy the text as it stands, e.g. "Wang et al. (2014)". However, let's get the quotes right as well as the reference to Section 2. Build your document to check if things look good.
 
