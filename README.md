@@ -180,7 +180,9 @@ The course material includes a [bibliography file](article/bibliography.bib) whi
 
 *Hint: The Elsevier template already includes the command. It is however commented. You need to uncomment the `\bibliographystyle` and `\bibliography` commands. Furthermore, you need to comment the `\begin{thebibliography}` environment (including its content).*
 
-In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby `<key>` corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXstudio and search the `lefort12qb` key.
+In Section 1, we cite a number of articles. Here, we use the following commands `\citet{<key>}` or `\citep{<key>}` whereby `<key>` corresponds to the unique identification of the citation in your bibliography. Open the `bibliography.bib` file in TeXstudio and search the `wang14hdsw` key.
+
+*Hint: Instead of Wang and Zhang (2001) write \citet{wang14hdsw}.*
 
 The difference between the `\citet` and `\citep` commands is for textual and parenthetical citations, respectively. In Section 1 you can try them both. These commands accept a comma separated list of keys.
 
