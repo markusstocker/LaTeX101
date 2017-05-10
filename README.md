@@ -19,7 +19,7 @@ The [lecture](lecture/stocker17latex101-lecture.pdf) introduces students to LaTe
 
 ## Hands-on
 
-For the hands-on part of the course, we will write a scientific article using LaTeX. The course provides a [default article](article/default-article.pdf) but we encourage students to bring along an article they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
+The hands-on part of the course consists of pratical exercises in writing scientific documents using LaTeX. The course material includes a [default article](article/default-article.pdf) but we encourage students to bring along an article they co-authored. The course assumes that you have installed [TeX Live](https://www.tug.org/texlive/) ([MiKTeX](https://miktex.org/) or [MacTeX](https://www.tug.org/mactex/)), [TeXstudio](http://www.texstudio.org/), [JabRef](http://www.jabref.org/), and [Git](https://git-scm.com/). The hands-on part is structured in four sub parts:
 
 [Hands-on I](#hands-on-i): Basic elements of an article  
 [Hands-on II](#hands-on-ii): Advanced elements of an article  
