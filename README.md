@@ -28,7 +28,7 @@ The hands-on part of the course consists of pratical exercises in writing scient
 
 ### Hands-on I
 
-In this first hands-on, we look at the basic elements of an article. We will write our article using the elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
+In this first hands-on, we look at the basic elements of an article. We will write our article using the Elsevier elsarticle document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
 
 ```
 latex elsarticle.ins
