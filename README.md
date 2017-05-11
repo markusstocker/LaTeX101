@@ -158,7 +158,7 @@ LaTeX computes the "optimal" place to position the figure in your article. Mostl
 \begin{figure}[!h]
 ```
 
-*Note: LaTeX will honor the [!h] instruction but ultimately follows its rules. To achieve you goal, you may need to move other elements.*
+*Note: LaTeX will honor the [!h] instruction but ultimately follows its rules. To achieve your goal, you may need to move other elements.*
 
 In Section 3, we refer to Table 1, Figure 1, and Figure 2. Such references are easily set using the `\ref{<label>}` command, whereby `<label>` refers to the name given in the corresponding `\label`, of tables and figures. 
 
