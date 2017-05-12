@@ -36,19 +36,19 @@ The hands-on part is structured in four sub parts:
 
 In this first hands-on, we look at the basic elements of an article. 
 
-We will write our article using the Elsevier `elsarticle` document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` sub directory, and execute the following command
+We write our LaTeX article using the Elsevier `elsarticle` document class. You can download the [elsarticle package](http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle) to your working directory from the [CTAN Comprehensive TeX Archive Network](http://ctan.org), as [zip archive](http://mirrors.ctan.org/macros/latex/contrib/elsarticle.zip). Unpack the zip archive, change to the `elsarticle` directory, and execute the following command
 
 ```
 latex elsarticle.ins
 ```
 
-This will create the required [`elsarticle.cls`](article/elsarticle.cls) and [`elsarticle-harv.bst`](article/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the template file to something that better reflects your article.
+This creates the required [`elsarticle.cls`](article/elsarticle.cls) and [`elsarticle-harv.bst`](article/elsarticle-harv.bst) files. Copy the `elsarticle.cls`, `elsarticle-harv.bst`, and `elsarticle-template-harv.tex` files into your working directory. The latter file serves as the template: rename the file to something that better reflects your article.
 
 *Hint: If you have problems with this step, follow the links above to the `.cls` and `.bst` files and you will be able to download copies. Remember to open links in a new tab and download the (raw) document. Unfortunately, on Windows saving the file will add a .txt appendix. You will need to rename the file: `move elsarticle.cls.txt elsarticle.cls`.*
 
-You are now ready to start writing your own article. The following description uses our [default article](article/default-article.pdf).
+You are now ready to start writing your article. The following description uses our [default article](article/default-article.pdf) but you can use this guide for your own article.
 
-Open the `.tex` file in TeXstudio as well as the default article (PDF). In TeXstudio, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXstudio. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
+Open the `.tex` file in TeXstudio, and the default article (PDF). In TeXstudio, select `Build & View` (green double arrow) to build the document. You will see a PDF output on the right hand side in TeXstudio. The aim now is to re-create the default article in LaTeX by writing the `.tex` file.
 
 As you can see in the footnote, we plan to submit the article to the Elsevier [SoftwareX](https://www.journals.elsevier.com/softwarex/) journal. Find the corresponding LaTeX command to specify the journal name and change it to *SoftwareX* (or your favorite journal). Build the document to see the change in PDF.
 
